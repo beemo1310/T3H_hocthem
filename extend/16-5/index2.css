@@ -1,0 +1,11 @@
+body{
+    display: flex;
+}
+h1{
+    color: blue;
+}
+
+#picture{
+    width: 5%;
+    height: 5%;
+}

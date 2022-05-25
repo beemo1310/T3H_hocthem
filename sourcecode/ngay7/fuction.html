@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name="nguyen van a";
+        var toan=9;
+        var van=8;
+        var anh=6;
+        /* điểm trung bình ba môn(anh hệ số 2) */
+        var average=(toan + van +anh*2)/4;
+        document.write("sinh vien "+ name + "   diem trung binh "+ average);
+        //function
+        function tinhDiem(t,v,a){
+            var diemTB = 0;
+            diemTB=(t+v+(a*2))/4;
+            return diemTB;
+        }
+        var a=10;
+        var b=9;
+        var c=8;
+        document.write("<br>");
+        document.write("diem trung binh la :"+tinhDiem(a,b,c)+"<br>");
+    </script>
+    <!-- hàm vô danh(chỉ dùng 1 lần) -->
+    <script>
+        // var xinChao = function(ten = "gia tri mac dinh"){
+        //     return "xin chao "+ ten;
+        // }
+        var xinChao = (ten = "gia tri mac dinh") => "xinchao "+ ten;
+        var a = xinChao();
+        document.write(a);
+        document.write("<br>");
+        var b=xinChao("linh");
+        document.write(b);
+    </script>
+    <!-- Nếu hàm chưa có giá trị mặc định mà ko truyền đối số vào thì lỗi -->
+</body>
+</html>

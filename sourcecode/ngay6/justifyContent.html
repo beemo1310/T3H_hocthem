@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            background-color: orange;
+            /* khai báo flex container */
+            display: flex;
+           /*  flex-direction: row; */
+           height: 400px;
+        }
+
+        .parent .child {
+            width: 100px;
+            /* height: 100px; */
+            background-color: green;
+            padding: 20px;
+            margin: 10px 3px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="parent">
+        <div class="child">div 1</div>
+        <div class="child">
+            <h1>1</h1>
+        </div>
+        <div class="child">div 3</div>
+        <div class="child">
+            <h2>2</h2>
+        </div>
+        <div class="child">div 5</div>
+        <div class="child">
+            <h3>3</h3>
+        </div>
+    </div>
+
+    <button id="control1">justify-content: center</button>
+    <button id="control2">justify-content: flex-start</button>
+    <button id="control3">justify-content: flex-end</button>
+    <button id="control4">justify-content: space-around</button>
+    <button id="control5">justify-content: space-between</button>
+
+    <script>
+        document.getElementById("control1").onclick = function(){
+            document.getElementsByClassName("parent")[0].style.justifyContent = "center";
+        }
+        document.getElementById("control2").onclick = function(){
+            document.getElementsByClassName("parent")[0].style.justifyContent = "flex-start";
+        }
+        document.getElementById("control3").onclick = function(){
+            document.getElementsByClassName("parent")[0].style.justifyContent = "flex-end";
+        }
+        document.getElementById("control4").onclick = function(){
+            document.getElementsByClassName("parent")[0].style.justifyContent = "space-around";
+        }
+        document.getElementById("control5").onclick = function(){
+            document.getElementsByClassName("parent")[0].style.justifyContent = "space-between";
+        }
+    </script>
+</body>
+</html>
