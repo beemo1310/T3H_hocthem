@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="input1" id="input1">
+
+    <button id="control1">in ra ket qua</button>
+
+    <p id="inner1" style="color:red"></p>
+    <script>
+        function tinhToan(){
+            var age = document.getElementById('input1').value;
+            age = parseInt(age);
+            if ( age > 18 ){
+                alert("adult");
+            }else{
+                alert("child");
+            }
+            
+            
+            // if(age >= 23 && age < 60){
+            //     document.getElementById('inner1').innerHTML = "tuoi lao dong";
+            // }else if (age >=19 && age < 23){
+            //     document.getElementById('inner1').innerHTML = "sinh vien";
+            // }else if(age>=16 && age < 19 ){
+            //     document.getElementById('inner1').innerHTML = "hoc sinh THPT";
+            // }else if(age>=11 && age < 16){
+            //     document.getElementById('inner1').innerHTML = "hoc sinh THCS";
+            // }else if(age >=6 && age < 11){
+            //     document.getElementById('inner1').innerHTML = "hoc sinh tieu hoc";
+            // }else if(age < 6) {
+            //     document.getElementById('inner1').innerHTML = "mam non";
+            // }else {
+            //     document.getElementById('inner1').innerHTML = "ve huu";
+            // }
+            if(age>60){
+                document.getElementById('inner1').innerHTML = "ve huu";
+            }else if(age >23){
+                document.getElementById('inner1').innerHTML = "tuoi lao dong";
+            }else if(age>19){
+                document.getElementById('inner1').innerHTML = "sinh vien";
+            }else if(age>16){
+                document.getElementById('inner1').innerHTML = "hoc sinh THPT";
+            }else if(age>11){
+                document.getElementById('inner1').innerHTML = "hoc sinh THCS";
+            }else if(age>6){
+                document.getElementById('inner1').innerHTML = "hoc sinh tieu hoc";
+            }else{
+                document.getElementById('inner1').innerHTML = "mam non";
+            }
+            
+        }
+        document.getElementById("control1").onclick = tinhToan;
+    </script>
+</body>
+</html>
