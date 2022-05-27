@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('hello world')">Click me</button>
+
+    <button onclick="demoClick()">Click me 2</button><br>
+
+    <input type="text" name="target1" id="target1" onchange="demoChangeValue()">
+
+    <p id="inner1" style="color: red;"></p>
+
+    <script>
+        function demoClick(){
+            alert('Click me 2');
+        }
+        
+        function demoChangeValue(){
+            // Lấy value từ input
+            var inputText = document.getElementById("target1").value;
+            document.getElementById("inner1").innerHTML = inputText;
+        }
+    </script>
+</body>
+</html>
